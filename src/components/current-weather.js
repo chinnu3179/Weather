@@ -1,20 +1,24 @@
 import React from 'react'
 
 
-export default function CurrentWeather() {
+export default function CurrentWeather(data) {
+    const weather = data.weather;
+    const forecast = data.forecast;
+    console.log(weather);
+    console.log(forecast);
   return (
     <div style={{
         backgroundColor:"grey",
-        width:"300px",
-        height:"300px",
         boxShadow: "6px",
         borderRadius:"6px",
 
     }}>
         <div>
-            <p>hfdgy</p>
-            <p>{}</p>
-            <p>{}</p>
+            <h2>Current Weather</h2>
+            <p>{JSON.stringify(weather)}</p>
+
+            <h2>Forecast</h2>
+            <p>{JSON.stringify(forecast)}</p>
         </div>
 
 
